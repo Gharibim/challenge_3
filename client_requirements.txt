@@ -1,0 +1,4 @@
+numpy==1.26.4
+PyAudio==0.2.14
+sounddevice==0.4.6
+websockets==12.0

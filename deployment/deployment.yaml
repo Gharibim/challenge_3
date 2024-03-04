@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: websocket-app
+  labels:
+    app: websocket-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: websocket-app
+  template:
+    metadata:
+      labels:
+        app: websocket-app
+    spec:
+      containers:
+      - name: websocket-app
+        image: 905418069163.dkr.ecr.us-east-2.amazonaws.com/challenge3:latest
+        ports:
+        - containerPort: 8000
